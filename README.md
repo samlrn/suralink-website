@@ -16,9 +16,11 @@ Open http://127.0.0.1:5174. Python 3 is required for the local server. The websi
 
 `dist/` is the complete static website. Publish its contents with any static host when ready. No build step is required. This project is a separate Git repository inside the app folder; the parent repository ignores `/website/`.
 
-The site is saved locally and in its GitHub repository. A GitHub Pages workflow is prepared in `.github/workflows/deploy-pages.yml`; it publishes only `dist/` after the website checks pass. GitHub Pages must be enabled with GitHub Actions as the source before deploying.
+Public website: https://samlrn.github.io/suralink-website/
 
-Once enabled, pushes to `main` automatically redeploy the site. You can also run **Deploy website to GitHub Pages** manually from the repository’s Actions tab. The project uses relative asset links so it works under the `/suralink-website/` project path. No custom domain is configured.
+The website repository is public to support GitHub Pages on GitHub Free. The separate app repository is unchanged. The workflow in `.github/workflows/deploy-pages.yml` publishes only `dist/` after the website checks pass. GitHub Pages uses GitHub Actions as its source.
+
+Pushes to `main` automatically redeploy the site. You can also run **Deploy website to GitHub Pages** manually from the repository’s Actions tab. The project uses relative asset links so it works under the `/suralink-website/` project path. No custom domain is configured.
 
 ## Content notes
 
