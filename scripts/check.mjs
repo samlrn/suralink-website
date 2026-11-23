@@ -3,7 +3,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
 const root = path.resolve('dist');
-const files = ['index.html', 'privacy.html', 'app-privacy.html'];
+const files = ['index.html', 'privacy.html', 'app-privacy.html', 'delete-account.html', 'terms.html'];
 for (const file of files) {
   const html = fs.readFileSync(path.join(root, file), 'utf8');
   for (const [, href] of html.matchAll(/(?:href|src)="([^"#]+)"/g)) {
